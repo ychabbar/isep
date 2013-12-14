@@ -1,0 +1,33 @@
+body {
+  padding-top: 50px;
+}
+
+.caption-btm{
+  background: rgba(0,0,0,0.7);
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  bottom
+  height: 30%;
+  position: absolute;
+  color: #fff;
+  border: 1px solid gray;
+    }
+
+
+.media-caption{
+   position: relative; 
+  }
+
+.shadowboxed{
+   /*  box-shadow: 7px 5px 6px 5px #555;  */
+    -moz-box-shadow: 0 4px 4px -2px black;
+    -webkit-box-shadow: 0 4px 4px -2px black;
+    box-shadow: 0 4px 4px -2px lightgray;
+  }
+  
+  
+.btn-margin-right{
+	margin-right: 15px;
+}
+ 

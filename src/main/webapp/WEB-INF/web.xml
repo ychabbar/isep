@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    id="WebApp_ID" version="2.5">
+ 
+ <servlet>
+        <servlet-name>spring</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:applicationContext.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>/</url-pattern>       
+    </servlet-mapping>  
+  
+  <servlet>
+        <servlet-name>inscription</servlet-name>
+        <servlet-class>
+           com.isepfm.servlets.Inscription
+        </servlet-class>
+        </servlet>
+   <servlet-mapping>
+        <servlet-name>inscription</servlet-name>
+        <url-pattern>/inscription</url-pattern>       
+    </servlet-mapping>  
+  
+  <servlet>
+	<servlet-name>Connexion</servlet-name>
+	<servlet-class>com.isepfm.servlets.Connexion</servlet-class>
+</servlet>
+  <servlet-mapping>
+	<servlet-name>Connexion</servlet-name>
+	<url-pattern>/connexion</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>Deconnexion</servlet-name>
+	<servlet-class>com.isepfm.servlets.Deconnexion</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Deconnexion</servlet-name>
+	<url-pattern>/deconnexion</url-pattern>
+</servlet-mapping>
+
+<!-- <servlet>
+	<servlet-name>Search</servlet-name>
+	<servlet-class>com.isepfm.servlets.Search</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Search</servlet-name>
+	<url-pattern>/search</url-pattern>
+</servlet-mapping>-->
+
+<listener>
+    <listener-class>com.isepfm.config.InitialisationDaoFactory</listener-class>
+</listener>
+
+
+
+</web-app>
